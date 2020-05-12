@@ -21,6 +21,10 @@ var grade2 = 9.0
 var grade3 = 5.0
 
 // your code here
+var classAverage = (grade1 + grade2 + grade3) / 3
+var yourGrade = 8.0
+yourGrade < classAverage
+print("below average")
 ```
 
 ***
@@ -32,6 +36,11 @@ You are given a number. Print even if the number is even or odd otherwise.
 let number = 2
 
 // your code here
+if number % 2 == 0 {
+  print("even")
+} else {
+  print("odd")
+}
 ```
 
 ***
@@ -44,6 +53,11 @@ var a = 12
 var b = 3
 
 // code here
+if a % b == 0 {
+  print("divisible")
+} else {
+  print("not divisible")
+}
 ```
 
 ***
@@ -57,6 +71,11 @@ var b = 3
 var c = 2
 
 // your code here
+if a == b || a == c || b == c {
+  print("At least two variables have the same value")
+} else {
+  print("All the values are different")
+}
 ```
 
 ***
@@ -69,6 +88,20 @@ var baconAge = 6 // the bacon is 6 days old
 var eggsAge = 12 // eggs are 12 days old
 
 // your code here
+var baconExpiryDate = 7
+var eggsExpiryDate = 21
+
+if baconAge > baconExpiryDate {
+  print("throw out bacon")
+}
+
+if eggsAge > eggsExpiryDate {
+  print("throw out eggs")
+}
+
+if baconAge < baconExpiryDate && eggsAge < eggsExpiryDate {
+  print("you can cook with bacon and eggs")
+}
 ```
 
 ***
@@ -81,6 +114,10 @@ The above rule is valid except that every 100 years special rules apply. Years t
 let year = 2014
 
 // your code here
+var aLeapYear = year % 100 == 0 && year % 4 != 0
+
+var toLeapOrNotToLeap = aLeapYear ? "Leap Year!" : "Not a Leap Year!"
+print(toLeapOrNotToLeap)
 ```
 
 ***
@@ -92,6 +129,10 @@ If you use `random()` it will give you a random number within a specified range.
 let randomNum = Int.random(in: 0...100)
 
 // your code here
+if randomNum % 2 == 0 {
+  print("heads")
+} else {
+  print("tails")
 ```
 
 Hint: use an if/else block along with the `%` operator
@@ -108,6 +149,21 @@ var c = 3
 var d = 4
 
 // your code here
+if a < b && a < c && a < d {
+  print("a is the smallest number")
+}
+
+if b < a && b < c && b < d {
+  print("b is the smallest number")
+}
+
+if c < a && c < b && c < d {
+  print("c is the smallest number")
+}
+
+if d < a && d < b && d < c {
+  print("d is the smallest number")
+}
 ```
 
 ***
@@ -121,7 +177,10 @@ b. !(3 > 3)
 c. !(true || false)
 d. (4 < 3 || 4 > 3) && ("Message: " == "Message: ")
 e. !(3 != 3)
-
+```
+Solution
+```
+a, b, d, e
 ```
 
 ***
@@ -143,7 +202,10 @@ d. (x && y) || z > 6
 e. !(z < 6) && !y && !x
 
 ```
-
+Solution
+```
+b, c
+```
 
 ***
 ## Question 11
@@ -155,7 +217,10 @@ a. Integers must have a positive or negative sign always.
 b. The maximum value for Integers is +∞.
 c. Integer types in computers take up a fixed amount of memory.
 d. Integers may contain decimals.
-
+```
+Solution
+```
+c, d
 ```
 
 
@@ -169,7 +234,10 @@ a. let numberOfPages: Int = 500
 b. let numberOfChapters = "For Whom The Bell Tolls"
 c. let nameOfBook: Int = 14
 d. let yearPublished = "Nineteen-thirty-five"
-
+```
+Solution
+```
+a, d, c, d
 ```
 
 ***
@@ -190,40 +258,46 @@ b %= a
 b %= c
 
 print(a + b + c)
-
+```
+Solution
+```
+30
 ```
 
 ***
 ## Question 14
-
-let div = 11 / 4
-
 ```swift
+   let div = 11 / 4
 1. The value of div is ____________________(or write "div1 will not compile")
 
-let div2 = 11.0 / 4.0
+   let div2 = 11.0 / 4.0
 2. The value of div2 is ________________________(or write "div2 will not compile")
-let isEqual = div == div2
 
+   let isEqual = div == div2
 3. The value of isEqual is_____________________ (or write "isEqual will not compile")
-
-
 ```
+Solution
+```
+1. 2
+2. 2.75
+3. isEqual will not compile
+```
+
 ***
 ## Question 15
-```swift
-var n = 7.5
-
-```
-
 What is true about the variable n?
 
 ```swift
+var n = 7.5
+
 a. n is a Float
 b. n is a Double
 c. n is a Decimal
 d. In is an Int
-
+```
+Solution
+```
+b. n is a Double
 ```
 
 # Bonus 
