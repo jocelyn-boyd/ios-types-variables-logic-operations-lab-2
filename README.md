@@ -490,8 +490,6 @@ A farmer is harvesting wheat from a number of wheat fields, given in a variable 
 
 Solution
 ```
-//A farmer is harvesting wheat from a number of wheat fields, given in a variable numberOfFields of type Int. Each field produces the same quantity of wheat given in a variable wheatYieldof type Double. Sometimes the harvest is increased by 50% due to favorable weather conditions. You are given this information in a variable weatherWasGood of type Bool.
-
 var numberOfFields: Int = 5
 var wheatYieldof: Double = 3.6
 
