@@ -23,8 +23,9 @@ var grade3 = 5.0
 // your code here
 var classAverage = (grade1 + grade2 + grade3) / 3
 var yourGrade = 8.0
-yourGrade < classAverage
-print("below average")
+if yourGrade < classAverage {
+  print("below average")
+}
 ```
 
 ***
@@ -301,18 +302,21 @@ b. n is a Double
 ```
 
 # Bonus 
-
 ***
 ## Question 1
 
 What are the differences between Double and Int in the numbers they can represent and how they store them?
-
+```
+Int represent whole numbers and Double represent decimal numbers. Doubles are stored in 64 bits.
+```
 
 ***
 ## Question 2 
 
 What are the differences between Float and Double?
-
+```
+A Float is a low-precision floating-point number and is stored in 32 bits. A Double is a high-precision floating-point number and is stored in 64 bits.
+```
 
 ***
 
@@ -321,7 +325,6 @@ What are the differences between Float and Double?
 What will happen when the code below is run?
 
 ```swift
-
 var width: Double = 49.8
 var extraWidth: Float = 10.1
 let totalWidth = width + extraWidth
@@ -331,8 +334,12 @@ a. It will print 48.9
 b. It will print 50.0
 c. It will print 50
 d. It will give a compile-time error
-
 ```
+Solution
+```
+d
+```
+
 ***
 ## Question 4 
 
@@ -342,7 +349,6 @@ Print the last digit of a.
 var a = 123
 
 ```swift
-
 Example 1
 Input: 
 var a = 123
@@ -356,8 +362,10 @@ var a = 337
 
 Output:
 7
-
-
+```
+Solution
+```
+print(a % 10)
 ```
 
 ***
@@ -375,7 +383,14 @@ var number = 6
 
 Expected Output: 
 Even
-
+```
+Solution
+```
+if number.isMultiple(of: 2) {
+  print("even")
+} else {
+  print("odd")
+}
 ```
 
 ***
@@ -387,9 +402,12 @@ You are given 2 Doubles a and b. Print their average
 ```swift
 var a = 2.0
 var b = 5.0
-
 ```
-
+Solution
+```
+var average = (a + b) / 2
+print(average)
+```
 
 ***
 
@@ -400,11 +418,17 @@ You are given 3 grades stored in 3 variables of type Double finalsGrade, midterm
 ### Print the grade for the class.
 
 ```swift
-
 var finalsGrade = 2.0
 var midtermGrade = 4.0
 var projectGrade = 3.0
+```
+Solution
+```
+var finalsGrade = 2.0 * 0.5
+var midtermGrade = 4.0 * 0.2
+var projectGrade = 3.0 * 0.3
 
+print(finalsGrade + midtermGrade + projectGrade)
 ```
 
 ***
@@ -420,10 +444,13 @@ Input:
 var mealCost:Double = 3.5
 var tip:Int = 20
 
-
 Output:
 4.2
-
+```
+Solution
+```
+var tipCost = mealCost * (Double(tip) / 100)
+print(mealCost + tipCost)
 ```
 ***
 
@@ -442,7 +469,16 @@ var yourGrade = 8.0
 
 Output:
 "above average"
+```
+Solution
+```
+var classAverage = (grade1 + grade2 + grade3) / 3
 
+if yourGrade > classAverage {
+  print("above average")
+} else {
+  print("below average")
+}
 ```
 ***
 
@@ -452,7 +488,21 @@ A farmer is harvesting wheat from a number of wheat fields, given in a variable 
 
 ### Print the total amount of wheat that the farmer will harvest.
 
-<img width="270" alt="Screen Shot 2019-09-12 at 1 50 33 PM" src="https://user-images.githubusercontent.com/43886240/64808175-c03a4180-d564-11e9-8502-4fcade888dc1.png">
+Solution
+```
+//A farmer is harvesting wheat from a number of wheat fields, given in a variable numberOfFields of type Int. Each field produces the same quantity of wheat given in a variable wheatYieldof type Double. Sometimes the harvest is increased by 50% due to favorable weather conditions. You are given this information in a variable weatherWasGood of type Bool.
 
+var numberOfFields: Int = 5
+var wheatYieldof: Double = 3.6
+
+var harvest = Double(numberOfFields) * wheatYieldof
+var weatherWasGood = true
+
+if weatherWasGood {
+  let increasedharvest = harvest * 0.5
+  print(increasedharvest + harvest)
+} else {
+  print(harvest)
+}
 ```
 
