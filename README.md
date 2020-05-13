@@ -364,7 +364,7 @@ Output:
 7
 ```
 Solution
-```
+```swift
 print(a % 10)
 ```
 
@@ -385,7 +385,7 @@ Expected Output:
 Even
 ```
 Solution
-```
+```swift
 if number.isMultiple(of: 2) {
   print("even")
 } else {
@@ -404,7 +404,7 @@ var a = 2.0
 var b = 5.0
 ```
 Solution
-```
+```swift
 var average = (a + b) / 2
 print(average)
 ```
@@ -423,7 +423,7 @@ var midtermGrade = 4.0
 var projectGrade = 3.0
 ```
 Solution
-```
+```swift
 var finalsGrade = 2.0 * 0.5
 var midtermGrade = 4.0 * 0.2
 var projectGrade = 3.0 * 0.3
@@ -448,7 +448,7 @@ Output:
 4.2
 ```
 Solution
-```
+```swift
 var tipCost = mealCost * (Double(tip) / 100)
 print(mealCost + tipCost)
 ```
@@ -471,7 +471,7 @@ Output:
 "above average"
 ```
 Solution
-```
+```swift
 var classAverage = (grade1 + grade2 + grade3) / 3
 
 if yourGrade > classAverage {
@@ -489,7 +489,7 @@ A farmer is harvesting wheat from a number of wheat fields, given in a variable 
 ### Print the total amount of wheat that the farmer will harvest.
 
 Solution
-```
+```swift
 var numberOfFields: Int = 5
 var wheatYieldof: Double = 3.6
 
